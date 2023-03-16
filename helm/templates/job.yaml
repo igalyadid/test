@@ -20,6 +20,8 @@ spec:
        env:
          - name: SERVICE
            value: {{ .Release.Name }}-service
-         - name: PORT
-           value: {{ .Values.service.servicePort }}
+         - name: PORT 
+           value: {{ .Values.service.servicePort | quote }}
+         - name: TEST
+           value: "{{ .Values.test }}"   
   backoffLimit: 1
