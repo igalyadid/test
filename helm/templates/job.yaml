@@ -23,5 +23,5 @@ spec:
          - name: PORT 
            value: {{ .Values.service.servicePort | quote }}
          - name: TEST
-           value: "{{ .Values.test }}"   
+           value: {{ .Values.test | quote }}   
   backoffLimit: 1
