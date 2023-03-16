@@ -6,7 +6,7 @@ metadata:
   annotations:
     checksum/config: {{ include (print $.Template.BasePath "/ConfigMap.yaml") . | sha256sum }}
     rollme: {{ randAlphaNum 5 | quote }}
-    argocd.argoproj.io/sync-wave: 5
+    argocd.argoproj.io/sync-wave: '5'
 spec:
   replicas: {{ .Values.ReplicaNumber }}
   selector:
