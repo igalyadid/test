@@ -47,7 +47,7 @@ spec:
             httpGet:
               path: /health/liveliness
               port: {{ .Values.containers.containerPort }}
-            scheme: HTTP
+              scheme: HTTP
             initialDelaySeconds: 1
             timeoutSeconds: 1
             periodSeconds: 10
