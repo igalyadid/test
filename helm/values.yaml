@@ -27,3 +27,7 @@ volume:
   mount:
     path: '/tmp/html'       
 test: Healthy    
+github:
+  user: igalyadid
+  token: empty-pass
+  url: <https://api.github.com/repos/igalyadid/test/issues>
