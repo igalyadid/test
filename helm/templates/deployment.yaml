@@ -19,7 +19,6 @@ spec:
           configMap:
             name: index.html
             defaultMode: 420
-
       containers:
         - resources: {}
           terminationMessagePath: /dev/termination-log
@@ -32,12 +31,10 @@ spec:
           image: {{ .Values.containers.image }}:{{ .Values.containers.tag }}
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
-
        # This will mount our File to the Pod File system   
          volumeMounts:
-         - name: index-html
-           mountPath: /tmp/html # this will mount the html.index file to it application location
-
+           - name: index-html
+             mountPath: /tmp/html # this will mount the html.index file to it application location
   strategy:
     type: RollingUpdate
     rollingUpdate:
